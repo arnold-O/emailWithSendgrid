@@ -12,13 +12,11 @@ app.use(express.json());
 const emailRoutes = require("./route/emailroute");
 
 
-app.get("/", (req, res) => {
-  res.send("here we go");
-});
 
-app.use("/api/email", emailRoutes);
 
-const PORT = process.env.PORT || 5000
+app.get("/", emailRoutes);
+
+const PORT = 5000
 
 const start = async () => {
 

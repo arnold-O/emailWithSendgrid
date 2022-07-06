@@ -6,7 +6,7 @@ const { sendEmail } = require('../controllers/emailControllers')
 const router = express()
 
 
-router.route('/').post(sendEmail)
+router.route('/').get(sendEmail)
 
 
 
